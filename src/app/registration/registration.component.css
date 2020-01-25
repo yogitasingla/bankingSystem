@@ -1,0 +1,80 @@
+.body{
+  
+  
+  font-family: "Georgia";
+}
+
+mat-card{
+    width: 80%;
+    /* margin-top: 5%; */
+    margin: auto;
+    
+    
+  }
+  
+  #hi{
+    text-align: center;
+  }
+  h6{
+    text-align: center;
+  }
+
+  
+  .jumbotron-fluid{
+    /* background: url("https://i1.wp.com/www.juststartinvesting.com/wp-content/uploads/2019/11/Online-Banking-Definition-Feature.png?fit=1350%2C670&ssl=1") no-repeat center center;  */
+   background: url("https://www.newszii.com/wp-content/uploads/2017/12/Do-Safe-Online-Banking.jpg"); 
+    -webkit-background-size: 100% 100%;
+
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    padding-bottom: 18px;
+    padding-top: 20px;
+    
+}
+  .display-4{
+    color:black;
+    text-align: center;
+    font-family:'Broadway' ;
+    
+    
+  }
+  #loginButton{
+    margin-top: 3%;
+    width:40% ;
+    align-self: center;
+    margin-bottom:25px;
+  }
+  h1,h6{
+    text-align: center;
+  }
+
+  #h6{
+    align-self: center;
+    text-align: center;
+    margin: auto;
+    margin-top:3% ;
+  }
+ .error{
+   color: red;
+   text-align: center;
+ }
+  #rsButton{
+    margin-top:3%; 
+    width: 50%;
+    align-self: center;
+  }
+  
+  .registration-container {
+    display: flex;
+    flex-direction: column;
+  }
+  /* .container{
+    margin-top:3%;
+  }
+   */
+  
+  
+  
+  
+  

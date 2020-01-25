@@ -1,0 +1,47 @@
+mat-card{
+    width: 80%;
+    margin-top: 5%;
+    margin: auto;
+  }
+  #loginButton{
+    margin-top:3%; 
+    width: 50%;
+    align-self: center;
+  }
+  .jumbotron{
+    background-color: rgb(2, 13, 46);
+    padding-bottom: 18px;
+    padding-top: 20px;
+   
+   
+  }
+  .error{
+    text-align: center;
+    color: red;
+  }
+  .display-4{
+    color: seashell;
+    text-align: center;
+    padding-bottom: 5px;
+  }
+  #h6{
+    align-self: center;
+    text-align: center;
+    margin: auto;
+    margin-top:3% ;
+    color: teal;
+  }
+  .login-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container{
+    margin-top:3%;
+  }
+  h1,h2,h3,h4,h5,h6{
+      text-align: center;
+  }
+  #hi{
+    text-align: center;
+  }
+  

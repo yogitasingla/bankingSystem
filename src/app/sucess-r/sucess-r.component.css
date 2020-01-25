@@ -1,0 +1,20 @@
+.jumbotron{
+    background-color: rgb(2, 13, 46);
+    padding-bottom: 25px;
+    
+    
+  }
+  .display-4{
+    color: seashell;
+    text-align: center;
+    padding-bottom: 5px;
+  }
+  #sucess{
+      text-align: center;
+  }
+ 
+  #login{
+      margin-top: 40px;
+      color: teal;
+    text-align: center;
+  }

@@ -1,0 +1,30 @@
+
+  <div id="hi">
+    <h4 class="h4"> <b>Log in to Access your Account</b></h4><br>
+    
+    <h6 class="h6">Enter your account deposit details to proceed</h6>
+    
+  </div>
+  <div class="row form-group col-12 mt-4">
+    <mat-card>
+  
+   
+  <div class="container">
+      <div class="login-container">
+
+<mat-form-field>
+    <input matInput placeholder="username" [(ngModel)]="username" required [ngModelOptions]="{standalone:true}">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="password" matInput placeholder="Password" required [(ngModel)]="password" [ngModelOptions]="{standalone:true}">
+  </mat-form-field>
+  <button mat-raised-button color="primary" id="loginButton" [disabled]="!username ||  !password  " class="btn custom-button align-content-md-center" type="submit" (click)="login()">LOGIN</button>
+  <p class="error">{{errorMsg}}</p>
+</div>
+  </div>
+    </mat-card>
+    <div id="h6">
+      <h6 >If your Account is not registred please register now</h6>  
+        <button mat-raised-button color="warn" id="registrationButton"  (click)="Registrationpage()">Registration</button>
+        </div>
+</div>

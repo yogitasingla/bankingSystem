@@ -1,0 +1,100 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" 
+      [ngClass]="{hidden:!(isHandset$ | async)}"
+      fixedInViewport="false"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-nav-list >
+      <a mat-list-item  class="co" (click)="registration()" >Registration</a>
+      
+    </mat-nav-list>
+    
+    <mat-accordion class="color">
+
+      <mat-expansion-panel class="color">
+        <mat-expansion-panel-header class="color">
+         Account Details
+        </mat-expansion-panel-header>
+        <mat-nav-list class="color">
+          <mat-divider></mat-divider>
+          <a mat-list-item (click)="deposit()">Deposit Ammount</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item (click)="withdraw()">Withdraw Amount</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item (click)="checkB()">Check blance</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item (click)="accStatment()">Account statments </a>
+          <mat-divider></mat-divider>
+        </mat-nav-list>
+        
+    
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel class="color">
+        <mat-expansion-panel-header class="color">
+          Security settings
+        </mat-expansion-panel-header>
+    
+        <mat-nav-list class="color">
+          <mat-divider></mat-divider>
+          <a mat-list-item (click)="password()">chnage password</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item href="#">Log out </a>
+          <mat-divider></mat-divider>
+          
+        </mat-nav-list>
+        
+    
+      </mat-expansion-panel>
+    
+    </mat-accordion>
+  </mat-sidenav>
+  <mat-sidenav-content >
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Online Banking</span>
+      
+       <span class="spacer"></span>
+      <button mat-button (click)="registration()">Registration
+        
+      </button>
+
+
+      <button mat-button [matMenuTriggerFor]="aboveMenu"> Setting</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button mat-menu-item (click)="password()">chnage password</button>
+  <button mat-menu-item>sign out</button>
+</mat-menu>
+
+
+
+<mat-menu #rootMenu="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="subMenu">Transactions</button>
+  <button mat-menu-item (click)="accStatment()">Amount Statment</button>
+</mat-menu>
+
+<mat-menu #subMenu="matMenu">
+  <button mat-menu-item  (click)="deposit()">Deposit Amount</button>
+  <button mat-menu-item (click)="withdraw()">withdraw Amount</button>
+  <button mat-menu-item (click)="checkB()">Check Blance</button>
+</mat-menu>
+
+<button mat-button  [matMenuTriggerFor]="rootMenu">Account Details
+  <!-- <mat-icon>more_vert</mat-icon> -->
+</button>
+    </mat-toolbar>
+    <ng-content>
+        
+    </ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,40 @@
+
+
+
+
+  <div id="hi">
+    <h4 class="h4"> <b>Enter the amount u want to deposit </b></h4><br>
+    
+    
+    
+  </div>
+  <div class="row form-group col-12 mt-4">
+    <mat-card>
+  
+   
+  <div class="container">
+      <div class="login-container">
+
+<mat-form-field>
+    <input  matInput placeholder="Account Number" [(ngModel)]="Account_no" required [ngModelOptions]="{standalone:true}">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="number" matInput placeholder="Deposit Amount" min=0  required [(ngModel)]="depositAmount" [ngModelOptions]="{standalone:true}">
+  </mat-form-field>
+  <button mat-raised-button color="primary" id="loginButton"
+   [disabled]="!depositAmount ||  !Account_no  " class="btn custom-button align-content-md-center" 
+  type="submit" (click)="deposit()" >DEPOSIT</button>
+
+
+  <!-- <button mat-raised-button color="primary" id="loginButton" 
+   class="btn custom-button align-content-md-center" 
+  type="submit" (click)="open()">DEPOSIT</button> -->
+  <p class="error">{{errorMsg}}</p>
+</div>
+  </div>
+    </mat-card>
+    
+</div>
+
+
+

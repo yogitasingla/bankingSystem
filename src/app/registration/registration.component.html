@@ -1,0 +1,98 @@
+
+<div class="body">
+
+
+<!-- <div class="jumbotron jumbotron-fluid">
+  <div class="container-jumbotron">
+    <h1 class="display-4"><b>Online Banking</b></h1>
+  
+  </div>
+</div> -->
+
+<div id="hi">
+  <h4 class="h3"> <b> Account Registration</b></h4><br>
+  
+  <h6 class="h6">Enter your  details Correctly</h6>
+  
+</div>
+
+
+
+
+<div class="row form-group col-12 mt-4">
+ 
+  <mat-card>
+
+ 
+<div class="container">
+    <div class="registration-container">
+      <mat-form-field>
+        <input type="email" matInput placeholder="Email Id"  [formControl]="emailFormControl"
+        [errorStateMatcher]="matcher"
+          [(ngModel)]="email" >
+         
+         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="username" [(ngModel)]="username" required [ngModelOptions]="{standalone:true}">
+      </mat-form-field>
+      <mat-form-field>
+        <input type="password" matInput placeholder="Password" required [(ngModel)]="password" [ngModelOptions]="{standalone:true}">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Mobile_no"  [formControl]="phoneFormControl"
+        [errorStateMatcher]="matcher"
+          [(ngModel)]="phone_no" maxlength="10" >
+         
+         <mat-error *ngIf="phoneFormControl.hasError('pattern') && !phoneFormControl.hasError('required')">
+          Please enter a valid Mobile no
+        </mat-error>
+        <mat-error *ngIf="phoneFormControl.hasError('required')">
+          phone no is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      
+
+      <!-- <mat-form-field>
+        <input  type="Telephone"
+        minlength="10"
+         matInput placeholder="Mobile_no" maxlength="10"[(ngModel)]="mobile_no" required  [ngModelOptions]="{standalone:true}">
+      </mat-form-field> -->
+      <!-- <mat-form-field>
+        <input matInput placeholder="Gender"[(ngModel)]="gender"  [ngModelOptions]="{standalone:true}">
+      </mat-form-field> -->
+
+      <mat-form-field>
+        <mat-label>Gender</mat-label>
+        <mat-select [(ngModel)]="gender" >
+          <mat-option *ngFor="let gender of genders" [value]="gender.value">
+            {{gender.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="City"[(ngModel)]="city"[ngModelOptions]="{standalone:true}">
+      </mat-form-field>
+      
+    
+    <button mat-raised-button color="primary" id="rsButton" [disabled]="!username || !email || !gender || !city || !password || !phone_no  " class="btn custom-button align-content-md-center" type="submit" (click)="submit()">Submit</button>
+    
+    <p class=error>{{errorMsg}}</p>
+      </div>
+    
+    
+    </div>
+  </mat-card>
+  <div id="h6">
+  <h6 >Already have a account !!  please Login Here</h6>  
+    <button mat-raised-button color="warn" id="loginButton"  (click)="loginpage()">login</button>
+    </div>
+  </div>
+</div>
