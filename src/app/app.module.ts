@@ -8,9 +8,9 @@ import{MatInputModule,MatCardModule,MatButtonModule,MatAutocompleteModule,MatSel
   MatDatepickerModule,MatNativeDateModule,MatSidenavModule,MatIconModule,MatToolbarModule,
   MatListModule,MatExpansionModule, MatMenuModule,MatDividerModule,MatStepperModule,MatTableModule,
   MatPaginatorModule,MatSortModule,MatDialogModule,MatSnackBarModule,} from '@angular/material';
-  //import {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
+import {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
   import {FormsModule} from "@angular/forms";
-  
+
   import{ReactiveFormsModule} from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
@@ -25,7 +25,7 @@ import { AccountDComponent } from './account-d/account-d.component';
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { CheckBComponent } from './check-b/check-b.component';
 import { AccStatmentComponent } from './acc-statment/acc-statment.component';
-  
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +55,7 @@ import { AccStatmentComponent } from './acc-statment/acc-statment.component';
     MatMenuModule,
     MatSortModule,
     MatDialogModule,
-    
+
     MatRadioModule,
     MatSnackBarModule,
     MatStepperModule,
@@ -68,7 +68,7 @@ import { AccStatmentComponent } from './acc-statment/acc-statment.component';
     MatAutocompleteModule,
     MatDatepickerModule,
     MatSelectModule,
-    MatNativeDateModule, 
+    MatNativeDateModule,
     ReactiveFormsModule,
     MatButtonModule,
     AppRoutingModule,
@@ -77,8 +77,8 @@ import { AccStatmentComponent } from './acc-statment/acc-statment.component';
 
 
   ],
-  providers: [],
-  
+  providers: [ { provide:MAT_SNACK_BAR_DATA, useValue: {} },],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

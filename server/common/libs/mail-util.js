@@ -13,7 +13,7 @@ class MailUtil{
         service: 'gmail',
     auth: {
     user: 'singlayogita0@gmail.com',
-    pass: 'new17password'
+    pass: 'nlqcvntficmntijn'
   }
       });
       

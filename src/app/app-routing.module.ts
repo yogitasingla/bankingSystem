@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: "withdraw", component:  WithdrawComponent},
   { path: "accStatment", component: AccStatmentComponent},
   { path: "checkB", component: CheckBComponent }
- 
+  
 ];
 
 @NgModule({

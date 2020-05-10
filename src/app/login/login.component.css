@@ -4,7 +4,7 @@ mat-card{
     margin: auto;
   }
   #loginButton{
-    margin-top:3%; 
+    margin-top:3%;
     width: 50%;
     align-self: center;
   }
@@ -12,8 +12,8 @@ mat-card{
     background-color: rgb(2, 13, 46);
     padding-bottom: 18px;
     padding-top: 20px;
-   
-   
+
+
   }
   .error{
     text-align: center;

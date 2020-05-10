@@ -12,6 +12,8 @@ export class BankingServiceService {
   constructor(private httpClient : HttpClient, private router :Router) { }
 
   registration(data1){
+
+    
     const url = `http://localhost:6001/webhook/register`;
  
   return this.httpClient.post(url, data1).pipe(
