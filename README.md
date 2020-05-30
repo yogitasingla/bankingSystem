@@ -1,4 +1,4 @@
-Online Banking web-app 
+
 Created a  Online Banking web-app
 in which for frontend used the technologies  like  Angular , Angular Material, 
 and REST API  build with  Node.Js and express JS . 
